@@ -6,75 +6,101 @@
     <title>SAPAI</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="img/icon1.png">
-
 </head>
 <body>
 
     <header>
-    <nav class="header">
-  <div class="nav-left"></div>
-<div class="menu">
-  <ul>
-    <li><a href="#head">Início</a></li>
-    <li><a href="#sobre2">Sobre</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
+        <!--cabeçalho do site-->  
+        <nav class="header">
+            <div class="menu">
+                <ul>
+                    <li><a href="#head">Início</a></li>
+                    <li><a href="#sobre2">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><button commandFor="login_modal" command="show-modal">Login</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <ul class="nav-right">
-    <li class="login"><a href="login.html">Login</a></li>
-  </ul>
-  </div>
-  <div class="menu-toggle">
-        <img src="img/menu.png" alt="Menu" class="menu-icon">
-        </div>
-        <div class ="menu2">
-        <ul>
-            <li><a href="#head">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li><a href="login.html">Login</a></li>
-        </ul>
-        </div>  
-</nav>    
-</header>
+    <!--Inicio do Modal-->
+    <dialog 
+        id="login_modal"
+        class="login-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="login-modal-title"
+    >
+        <button class="close-button" commandFor="login_modal" command="close">X</button>
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="login" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="senha_login" required>
+
+            <button type="submit">Entrar</button>
+            <button type="button" onclick="window.location.href='registro.html'">Registrar</button>
+
+            <div class="remember">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Lembrar usuário?</label>
+            </div>
+        </form>
+    </dialog>
+    <!--Fim do Modal-->
+
+    <!--Inicio do Banner-->
     <div class="head" id="head">
-    <div class="caixa-de-texto">
-        <h1><span class="S">S</span><span class="A">A</span><span class="P">P</span><span class="a">A</span><span class="I">I</span></h1>
-        <h2>O sistema de educação inclusiva</h2>
-        <!-- <p>O SAPAI é um sistema de apoio a professores de alunos com deficiência intelectual. Ele promove a conexão entre pais, escola, especialistas e estudantes, facilitando a comunicação e o acompanhamento pedagógico. Seu objetivo é tornar o processo educacional mais acessível e eficiente, contribuindo para uma vida acadêmica mais clara, organizada e acolhedora para o aluno.</p> -->
+        <div class="caixa-de-texto">
+            <h1><span class="S">S</span><span class="A">A</span><span class="P">P</span><span class="a">A</span><span class="I">I</span></h1>
+            <h2>O sistema de educação inclusiva</h2>
+        </div>
     </div>
-    </div>
+    <!--Fim do Banner-->
+
+    <!--Inicio dos Cards-->
     <div id="sobre2"></div>
     <div class="container-cards" id="sobre">
+
+        <!-- Card 1 -->
         <div class="card" id="c1">
             <h1>O que é o SAPAI?</h1>
-            <p>O SAPAI é um sistema de apoio a professores de alunos com deficiência intelectual. Ele promove a conexão entre pais, escola, especialistas e estudantes, facilitando a comunicação e o acompanhamento pedagógico. Seu objetivo é tornar o processo educacional mais acessível e eficiente, contribuindo para uma vida acadêmica mais clara, organizada e acolhedora para o aluno.</p>
+            <p>Sistema de apoio a professores de alunos com deficiência intelectual, conectando pais, escola, especialistas e estudantes.</p>
         </div>
+
+        <!-- Card 2 -->
         <div class="card" id="c2">
-            <h1>Quem pode usar o SAPAI?</h1>
-            <p>O SAPAI é destinado a professores, pais, especialistas e estudantes envolvidos no processo educacional de alunos com deficiência intelectual. Ele é projetado para ser uma ferramenta de apoio que facilita a comunicação e o acompanhamento pedagógico, promovendo uma educação mais inclusiva e acessível para todos os envolvidos.</p>
+            <h1>Quem pode usar?</h1>
+            <p>Professores, pais, especialistas e estudantes envolvidos no processo educacional de alunos com deficiência intelectual.</p>
         </div>
+
+        <!-- Card 3 -->
         <div class="card" id="c3">
-            <h1>Quais são os benefícios do SAPAI?</h1>
-            <p>O SAPAI oferece diversos benefícios, incluindo a facilitação da comunicação entre pais, escola, especialistas e estudantes, o acompanhamento pedagógico mais eficiente, a promoção de uma educação mais acessível e inclusiva, e a organização de informações importantes para o processo educacional. Ele contribui para uma vida acadêmica mais clara, organizada e acolhedora para os alunos com deficiência intelectual.</p>
+            <h1>Quais os benefícios?</h1>
+            <p>Facilita a comunicação, melhora o acompanhamento pedagógico e organiza informações para uma educação mais inclusiva.</p>
         </div>
-        <div class="card" id="c4">
-            <h1>Como posso acessar o SAPAI?</h1>
-            <p>O SAPAI pode ser acessado por meio de uma plataforma online, onde os usuários podem criar contas e se conectar com outros membros da comunidade educacional. Para acessar o SAPAI, basta visitar o site oficial e seguir as instruções para criar uma conta ou fazer login, dependendo do seu papel (professor, pai, especialista ou estudante).</p>
-        </div>   
+
     </div>
+    <!--Fim dos Cards-->
+
+    <!-- Inicio do Formulário de Contato -->
     <div class="contato" id="contato">
         <h2>Entre em contato conosco</h2>
-        <form>
+        <form id="contact-form" action="#" method="post">
             <input type="text" placeholder="Nome" required>
             <input type="email" placeholder="Email" required>
             <textarea placeholder="Mensagem" required></textarea>
             <button type="submit">Enviar</button>
-        
+        </form>
     </div>
+
+    <!-- Rodapé -->
     <div class="footer">
         <p>© 2026 SAPAI. Todos os direitos reservados.</p>
-        </div>
-            <script src="codigo2.js"></script>
+    </div>
+
+    <script src="codigo2.js"></script>
 </body>
 </html>

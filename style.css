@@ -1,3 +1,6 @@
+/* ========================
+   RESET GERAL
+======================== */
 * {
   margin: 0;
   padding: 0;
@@ -10,54 +13,125 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
-  /* overflow: hidden; */
 }
 
 img, video {
   max-width: 100%;
   display: block;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+/* ========================
+   HEADER E NAVBAR
+======================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6vh;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+header a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  margin: 10px 20px;
+  font-size: 20px;
+}
+
+nav.header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* Lista de itens do menu */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+  padding: 0 10px;
+}
+
+nav a:hover {
+  font-weight: bold;
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Botão Login na navbar */
+.menu button {
+  background-color: #3B82F6;
+  padding: 5px 15px;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background-color: #1E40AF;
+}
+
+/* ========================
+   HERO SECTION
+======================== */
 .head {
   position: relative;
   width: 100%;
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-
   padding: 70px;
   overflow: hidden;
-  color: white;
+  color: #ffffff;
 }
 
-
+/* Imagem de fundo com blur */
 .head::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 100%;
-
   background-image: url('img/bg4.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
   filter: blur(5px);
   transform: scale(1.1);
   z-index: -1;
-}
-
-
-body {
-  font-family: Arial, sans-serif;
 }
 
 .head h1 {
@@ -73,141 +147,39 @@ body {
   font-weight: bold;
 }
 
-.head p {
-  max-width: 1007px;
-  font-size: 16px;
-  line-height: 1.5;
-  margin-top: 20px;
-  margin-bottom: 0;
+/* Caixa escura com o nome e slogan */
+.caixa-de-texto {
   font-weight: bold;
-}
-
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 5vh; /* troque 4vh por altura fixa */
-  z-index: 1000;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: overlay;
-}
-header a{
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  margin: 10px 20px 10px 20px;
-  padding: 10px 10 10px 10px;
-  font-size: 20px;
-
-}
-
-/* header ul{
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  padding-left: 0;
-  margin:0;
-  margin-top: 5px;
-  gap: 24px;
-} */
-
-
-.login a{
-  background-color: #38bdf8;
-  padding: 5px 15px;
-  border-radius: 5px;
-  color: white;
-  right: 20px;
-  top: 5px;
-}
-
-.caixa-de-texto{
-  background-color: rgba(0, 0, 0, 0.733);
+  background-color: rgba(39, 39, 39, 0.733);
   padding: 20px 50px;
   border-radius: 10px;
   margin: 20px;
-
 }
 
-nav.header {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  padding: 0 ;
-}
-
-nav.header ul:first-child {
-  display: flex;
-  gap: 24px;
-}
-
-nav.header ul:last-child {
-  margin-left: auto;
-}
-
- nav a:hover {
-  font-weight: bold;
-  color: cyan;
-  transform: scale(1.02);
-  transition: transform 0.3s ease;
- 
-}
-.menu li{
-  list-style: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-}
-
-.menu {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-}
-
-.nav-right {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.menu,
-.nav-right {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
- .caixa-de-texto:hover {
+.caixa-de-texto:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
- }
-
- .S {
-  color: #3357FF;
-}
-.A {
-  color: #fca41d;
-}        
-.P {
-  color: #f3507d;
-}
-.a {
-  color: rgb(157, 69, 204);
 }
 
-.I {
-  color: #83ca2b;
-}
+/* Cores individuais de cada letra do logo SAPAI */
+.S { color: #16A34A; } /* verde */
+.A { color: #EAB308; } /* amarelo girassol */
+.P { color: #16A34A; } /* verde */
+.a { color: #EAB308; } /* amarelo */
+.I { color: #16A34A; } /* verde */
 
-.container-cards{
+/* ========================
+   CARDS DE INFORMAÇÃO
+======================== */
+.container-cards {
   display: flex;
   justify-content: center;
   gap: 100px;
   margin-top: 50px;
 }
-.card{
-  background-color: #38bdf8;
+
+.card {
+  background-color: #DBEAFE;
   padding: 20px 50px;
   border-radius: 10px;
   width: 300px;
@@ -215,75 +187,19 @@ nav.header ul:last-child {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
-  align-items: center;
+  border: 2px solid #3B82F6;
 }
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #000000;
-  border-radius: 5px;
-}
-
-.remember{
-  align-items: center;
-  margin-top: 10px;
-  padding-bottom: 0;
-  gap: 0px;
-  transform: scale(2);
-}
-
-button {
-  background-color: #38bdf8;
-  color: black;
-  padding: 10px 20px;
-  border: 2px solid #000000;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.card h1{
-  font-size: 27px;
-  margin-bottom: 10px;
-}
-
-/* #c1{
-  background-color: #3357FF;
-}
-#c2{
-  background-color: #fca41d;
-}
-#c3{
-  background-color: #f3507d;
-}
-#c4{
-  background-color: rgb(157, 69, 204);
-} */
-
 
 .card h1 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.menu-icon {
-  display: none;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.menu-toggle{
-  display: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.contato{
-  background-color: #38bdf8;
+/* ========================
+   FORMULÁRIO DE CONTATO
+======================== */
+.contato {
+  background-color: #DBEAFE;
   padding: 20px 50px;
   border-radius: 10px;
   width: 80%;
@@ -294,116 +210,162 @@ button {
   text-align: center;
 }
 
-.footer {
-  background-color: #38bdf8;
+/* Inputs e textarea globais */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+/* Inputs específicos do formulário de contato */
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px 16px;
+  border: 2px solid #3B82F6;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  color: #333;
+  background-color: #f9f9f9;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botões dentro de formulários */
+form button {
+  background-color: #3B82F6;
+  color: white;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1E40AF;
+}
+
+/* ========================
+   MODAL DE LOGIN
+======================== */
+.login-modal {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  border: 0;
+  border-radius: 10px;
+  width: 400px;
+  height: 78vh;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.login-modal h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
   color: black;
   text-align: center;
-  padding: 10px 0;
+}
 
-  bottom: 0;
+.login-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-modal input {
+  padding: 10px;
+  border: 2px solid #3B82F6;
+  border-radius: 5px;
+}
+
+/* Checkbox lembrar usuário */
+input[type="checkbox"] {
+  accent-color: #16A34A;
+  width: 18px !important;
+  height: 18px !important;
+  vertical-align: middle;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Botões dentro do modal */
+.login-modal button {
+  background-color: #3B82F6;
+  color: white;
+  padding: 10px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-modal button:hover {
+  background-color: #1E40AF;
+}
+
+/* Botão X de fechar o modal */
+.login-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+.login-modal label {
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+/* Fundo escurecido atrás do modal */
+.login-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ========================
+   FOOTER
+======================== */
+.footer {
+  background-color: #1E40AF;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
   width: 100%;
 }
 
-#sobre2{
+/* ========================
+   ESPAÇADOR DE SEÇÃO
+======================== */
+#sobre2 {
   height: 50px;
 }
 
-.menu2{
-  list-style: none;
-  display: none;
-}
-.menu2 ul {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.menu2 li {
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-
-.menu2 li a {
-  display: block;
-  width: 100%;
-  padding: 18px 0;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
-}
-
-
-/* pagina login */
-
-#login{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-image: url(img/bg4.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-.login-container{
-  padding: 20px 50px;
-  border-radius: 10px;
-  color: white;
-  text-align: center;
-  position: relative;
-}
-.login-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: #38bdf8;
-  opacity: 0.75;
-
-  z-index: -1;
-  border-radius: 10px;
-}
-
-.back-button {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: bold;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 90px;
-  height: 90px;
-}
-
-.resposta.active {
-  margin-top: 20px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  height: 100px;
-  width: 30vw;
-  /* background-color: aqua; */
-}
-.resposta.active::after {
-  content: "";
-  display: block;
-  clear: both;
-  background-color: #38bdf8;
-  width: 100%;
-  height: 100%;
-  
-}
-
-/* Responsividade */
+/* ========================
+   RESPONSIVIDADE
+======================== */
 @media (max-width: 1400px) {
   .container-cards {
     flex-direction: column;
@@ -414,24 +376,28 @@ button {
     width: 80%;
     margin-bottom: 10px;
     font-size: 20px;
-    align-items: center;
   }
-  .card h1{
-    font-size: 27px;;
+  .card h1 {
+    font-size: 27px;
   }
 }
 
+/* Tablet e celular - menu igual ao desktop, só maior */
 @media (max-width: 1000px) {
-  .header{
-    display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  z-index: 1000;
-
+  header {
+    height: 70px;
+  }
+  .menu ul {
+    gap: 5px;
+  }
+  .menu li {
+    padding: 0 5px;
+  }
+  header a {
+    font-size: 22px;
+  }
+  .menu button {
+    font-size: 22px;
   }
   .container-cards {
     flex-direction: column;
@@ -441,91 +407,22 @@ button {
     width: 90%;
     margin-bottom: 20px;
   }
-  .menu{
-    display: block;
-    gap: 24px;
-    justify-content: center;
-  }
-  .menu-icon {
-    display: block;
-    width: 40px;
-    height: 40px;
-  }
-  .menu-toggle{
-    display: block;
-    position: absolute;
-    right: 20px;
-    border-radius: 5px;
-    padding: 10px;
-    transform: translateY(-50%);
-    top: 50%;
-    margin-left: auto;
-  }
-  .menu{
-    display:none;
-  }
-  header{
-    gap: 2px;
-  }
-
-.menu2 {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 60px);
-  background-color: #38bdf8;
-  z-index: 999;
-  display: none;
-
-  /* animação */
-  transform: translateY(-20px);
-  opacity: 0;
-  pointer-events: none;
-
-  transition: transform 0.35s ease, opacity 0.35s ease;
-
 }
 
-
-.menu2.active {
-  display: block;
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-
-nav{
-    position: relative;
-  }
-.menu2 ul{
-  display: flex;
-  flex-direction: column;
-
-}
-.menu2 li{
-  text-align: center;
-
-}
-nav.header{
-  padding: 0;
-}
-#login{
-  height: 100%;
-  width: 100%;
-}
-}
 @media (max-width: 480px) {
-    .header{
-    display: flex;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  z-index: 1000;
-
+  header {
+    height: 60px;
+  }
+  header a {
+    font-size: 16px;
+    margin: 5px 8px;
+  }
+  .menu button {
+    font-size: 16px;
+    padding: 4px 10px;
+  }
+  .menu li {
+    padding: 0 2px;
   }
   .head h1 {
     font-size: 30px;
@@ -536,75 +433,8 @@ nav.header{
   .caixa-de-texto {
     padding: 15px 30px;
   }
-  .container-cards{ 
-    flex-direction: column;
-      align-items: center;
-  }
   .card {
-    width: 70%;
+    width: 85%;
     margin-bottom: 20px;
   }
-  .menu-toggle{
-    display: block;
-    position: absolute;
-    padding-left: auto;
-    border-radius: 5px;
-    padding: 10px;
-    transform: translateY(-50%);
-    top: 50%;
-  }
-  .menu{
-    display: none;
-    gap: 0px;
-    justify-content: center;
-  }
-  .menu-icon {
-    display: block;
-    width: 40px;
-    height: 40px;
-  }
-  header{
-    position: relative;
-    right: 10px;
-  }
-  nav{
-    position: relative;
-  }
-  .login{
-    display: none;
-  }
-  header{
-    position: fixed;
-  }
-.menu2 {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 60px);
-  background-color: #38bdf8;
-  z-index: 999;
-
-  /* animação */
-  transform: translateY(-20px);
-  opacity: 0;
-  pointer-events: none;
-
-  transition: transform 0.35s ease, opacity 0.35s ease;
-}
-
-
-.menu2.active {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-nav.header{
-  padding: 0;
-}
-#login{
-  height: 100%;
-  width: 100%;
-}
-
 }
