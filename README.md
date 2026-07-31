@@ -43,4 +43,6 @@ ele será ate então um site.
 
 # Autores
 
-Os autores originais do projeto eram Filipe Passarinho, Marlon e 
+Os autores originais do projeto eram Filipe Passarinho, Marlon Isaac e Mauricio de Macedo.
+
+No momento o projeto está totalmente nas mãos de Marlon Isaac
