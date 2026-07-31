@@ -1,4 +1,4 @@
-# SAPAI versão 0.0.1
+# SAPAI versão 0.1
 
 Sistema de apoio a professores de alunos com deficiência intelectual, 
 conectando pais, escola, especialistas e estudantes.
@@ -13,7 +13,7 @@ foi criado com o objetivo de integrar professores, alunos, responsáveis e espec
 # Funcionalidades
 
 O SAPAI tem diversas funcionalidades, 
-na versão 0.0.1 a primeira funcionalidade é o login e o registro,
+na versão 0.1 a primeira funcionalidade é o login e o registro,
 o login e o registro são utilizados para poder filtrar o tipo de usuário e quem é a pessoa a entrar,
 
 # Ferramentas
